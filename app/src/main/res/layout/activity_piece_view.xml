@@ -12,7 +12,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:src="@drawable/w_bishop"
-            app:layout_constraintDimensionRatio="1:1"/>
+            app:layout_constraintDimensionRatio="1:1"
+            android:id="@+id/pieceIconId"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

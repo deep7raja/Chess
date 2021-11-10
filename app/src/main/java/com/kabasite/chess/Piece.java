@@ -1,18 +1,19 @@
 package com.kabasite.chess;
 
 import android.content.Context;
-import android.graphics.drawable.VectorDrawable;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 
 import org.jetbrains.annotations.NotNull;
 
 
-public class Piece extends AppCompatImageView {
+public class Piece extends androidx.appcompat.widget.AppCompatImageView {
     private int tileColor;
+    private Drawable tileIcon;
 
     public Piece(@NonNull @NotNull Context context) {
         super(context);
@@ -36,5 +37,13 @@ public class Piece extends AppCompatImageView {
 
     public void setTileColor(int tileColor) {
         this.tileColor = tileColor;
+    }
+
+    public Drawable getTileIcon() {
+        return tileIcon;
+    }
+
+    public void setTileIcon(Drawable tileIcon) {
+        this.tileIcon = tileIcon;
     }
 }

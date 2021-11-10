@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,10 +37,11 @@ public class GridAdapter extends ArrayAdapter<Piece> {
         }
         else{
             listitemView.findViewById(R.id.pieceViewId).setBackgroundColor(mContext.getResources().getColor(R.color.c_tile_w));
-
         }
+        ((ImageView)listitemView.findViewById(R.id.pieceIconId)).setImageDrawable(pieceList.get(position).getTileIcon());
         return listitemView;
     }
+
 
 
 }
