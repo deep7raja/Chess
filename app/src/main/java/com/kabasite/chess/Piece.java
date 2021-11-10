@@ -12,9 +12,14 @@ import org.jetbrains.annotations.NotNull;
 
 
 public class Piece extends AppCompatImageView {
+    private int tileColor;
 
     public Piece(@NonNull @NotNull Context context) {
         super(context);
+    }
+    public Piece(@NonNull @NotNull Context context, int tileColor) {
+        super(context);
+        this.tileColor = tileColor;
     }
 
     public Piece(@NonNull @NotNull Context context, @Nullable @org.jetbrains.annotations.Nullable AttributeSet attrs) {
@@ -25,4 +30,11 @@ public class Piece extends AppCompatImageView {
         super(context, attrs, defStyleAttr);
     }
 
+    public int getTileColor() {
+        return tileColor;
+    }
+
+    public void setTileColor(int tileColor) {
+        this.tileColor = tileColor;
+    }
 }
